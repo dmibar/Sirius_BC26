@@ -2,7 +2,7 @@
 Этот репозиторий содержит код для системы на [LangGraph](https://www.langchain.com/langgraph), которая способна за 6-10 секунд проверять статистические гипотезы, по табличным данным.
 
 # Пример работы системы
-![Example]([https://github.com/jon/coolproject/raw/master/image/image.png](https://github.com/dmibar/Sirius_BC26/blob/main/images/img1.png))
+![Example]([./images/img1.png))
 
 # Installation
 1. Клонирование репозитория:
