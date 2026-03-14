@@ -1,12 +1,39 @@
-# Sirius_BC26
-
 # Система для автоматической проверки статистических гипотез
+Этот репозиторий содержит код для системы на [LangGraph](https://www.langchain.com/langgraph), которая способна за 6-10 секунд проверять статистические гипотезы, по табличным данным.
 
-**Работа для конкурса научно-технологических проектов Большие вызовы (Сириус)**
+# Пример работы системы
+![Example]([https://github.com/jon/coolproject/raw/master/image/image.png](https://github.com/dmibar/Sirius_BC26/blob/main/images/img1.png))
 
-## Описание проекта
-Данный проект - система предоставляющая проверку гипотез, взаимодействующая с пользоватлем на естественном языке
+# Installation
+1. Клонирование репозитория:
+   git clone https://github.com/dmibar/Sirius_BC26.git
+    cd Sirius_BC26
+2. Создание виртуального окружения:\
+Windows:
+* python -m venv venv
+    * venv\Scripts\activate
 
-## Структура репозитория
-*   `LangGraph.ipynb` — основная логика работы системы
-*   `explore.ipynb` — исследовательская часть
+
+MacOS/Linux
+* python3 -m venv venv
+    * source venv/bin/activate
+
+3. Установка зависимостей\
+pip install -r requirements.txt\
+pip install ipykernel\
+python -m ipykernel install --user --name=venv --display-name "Python (Sirius_BC26)"
+
+4. Запуск\
+Откройте [code](https://github.com/dmibar/Sirius_BC26/blob/main/Code/CodeOfSystem.ipynb).ipynb через Jupyter (например VS Code)\
+В правом верхнем углу (выбор Kernel) выберите созданное окружение: "Python (Sirius_BC26)".
+
+# Структура проекта
+```mermaid
+flowchart TD
+    A[AutoStatFlow] --> B(Code)
+    A --> C(Docs)
+    A --> D(research)
+
+    B --> a(Весь код системы)
+    C --> b(Документация)
+    D --> d(Исследования)
