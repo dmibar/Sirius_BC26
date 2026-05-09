@@ -1,6 +1,6 @@
 # Система для автоматической проверки статистических гипотез
 Этот репозиторий содержит код для системы на [LangGraph](https://www.langchain.com/langgraph), которая способна за **3-4** секунд проверять статистические гипотезы, по табличным данным.\
-Используя проверки условий применения, система на подберет статистический тест, и проверит гипотезу. После, предоставит полноценную сводку исследования.
+Используя проверки условий применения стат. методом, система подберет стат. тест, и проверит гипотезу. После, предоставит полноценную сводку исследования.
 
 # Граф работы системы
 ```mermaid
@@ -101,5 +101,5 @@ flowchart TD
 
 
 # English
-This repository contains code for a system on [LangGraph](https://www.langchain.com/langgraph), which is capable of testing statistical hypotheses using tabular data in **6-10** seconds.\
-Using application condition checks, the LLM-based system will select a statistical test and test the hypothesis. Afterwards, it will provide a full summary of the study.
+This repository contains code for a system at [LangGraph](https://www.langchain.com/langgraph), which is capable of testing statistical hypotheses in **3-4** seconds, according to tabular data.\
+comply with the conditions for checking the application of stat. method, system select stat. test and tests the hypothesis. After this, an additional full summary of the study.
