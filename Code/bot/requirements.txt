@@ -1,0 +1,14 @@
+pyTelegramBotAPI
+langgraph
+langchain-google-genai
+langchain-groq
+google-generativeai
+langchain-core
+pydantic
+pandas
+matplotlib
+seaborn
+scipy
+statsmodels
+numpy
+pillow
