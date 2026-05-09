@@ -47,28 +47,43 @@ graph TD
 # Пример работы системы
 ![Example](./images/img.png)
 
-# Installation
-1. Клонирование репозитория:
-   git clone https://github.com/dmibar/Sirius_BC26.git
-    cd Sirius_BC26
-2. Создание виртуального окружения:\
-Windows:
-* python -m venv venv
-    * venv\Scripts\activate
+# Инструкция по установке и запуску
 
+### 1. Клонирование репозитория
+Склонируйте проект на локальный компьютер и перейдите в рабочую директорию:
+```bash
+git clone https://github.com
+cd Sirius_BC26
+```
 
-MacOS/Linux
-* python3 -m venv venv
-    * source venv/bin/activate
+### 2. Создание виртуального окружения
+Создайте изолированное окружение, чтобы избежать конфликтов библиотек:
 
-3. Установка зависимостей\
-pip install -r requirements.txt\
-pip install ipykernel\
+**Windows:**
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+**MacOS / Linux:**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 3. Установка зависимостей и настройка ядра
+Установите необходимые пакеты и зарегистрируйте окружение в Jupyter:
+```bash
+pip install -r requirements.txt
+pip install ipykernel
 python -m ipykernel install --user --name=venv --display-name "Python (Sirius_BC26)"
+```
 
-4. Запуск\
-Откройте [code](https://github.com/dmibar/Sirius_BC26/blob/main/Code/CodeOfSystem.ipynb).ipynb через Jupyter (например VS Code)\
-В правом верхнем углу (выбор Kernel) выберите созданное окружение: "Python (Sirius_BC26)".
+### 4. Запуск
+1. Откройте ноутбук [CodeOfSystem.ipynb](Code/CodeOfSystem.ipynb) через VS Code или Jupyter Lab.
+2. В интерфейсе выбора ядра (обычно в правом верхнем углу) выберите **"Python (Sirius_BC26)"**.
+3. Теперь вы можете запускать ячейки кода.
+
 
 # Структура проекта
 ```mermaid
