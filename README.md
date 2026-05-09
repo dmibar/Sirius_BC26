@@ -2,6 +2,48 @@
 Этот репозиторий содержит код для системы на [LangGraph](https://www.langchain.com/langgraph), которая способна за **3-4** секунд проверять статистические гипотезы, по табличным данным.\
 Используя проверки условий применения, система на подберет статистический тест, и проверит гипотезу. После, предоставит полноценную сводку исследования.
 
+# Граф работы системы
+```mermaid
+graph TD
+    Start([__start__]) --> FindVars[Поиск переменных]
+    FindVars --> Wait[Ожидание ввода]
+    Wait --> IsCorrect{Переменные корректны?}
+    
+    IsCorrect -- Нет --> FindVars
+    IsCorrect -- Да --> FixTypes[Корректировка типов данных]
+    
+    FixTypes --> Preprocess[Предобработка]
+    Preprocess -- Переменные присутствуют в данных --> CleanTarget{Выбор стат теста}
+    
+    Preprocess -- Полученных значений нет в данных --> End
+
+    CleanTarget -- "Одна количественная другая номинативная" --> NormDist[Проверка нормальности]
+    CleanTarget -- "Много групп и количественный таргет" --> NormDistVar[Проверка нормальности групп]
+    CleanTarget -- "Все категориальные" --> Chi2[Критерий Хи-квадрат]
+    CleanTarget -- "Все числовые" --> LinReg[Линейная регрессия]
+    CleanTarget -- "Много групп и категориальный таргет" --> LogitReg[Логистическая регрессия]
+
+    NormDist --> MakeSamples[Подготовка выборок]
+    MakeSamples --> MW_Test{Выбор теста}
+    
+    MW_Test -- "Манна-Уитни" --> MW_Sub{Вариант}
+    MW_Sub -- "Бакетированный" --> MW_Bake[Манна-Уитни - Бакетированный]
+    MW_Sub -- "Стандарт" --> MW_Std[Манна-Уитни - Std]
+    
+    MW_Test -- "T-test" --> TTest[T-критерий Стьюдента]
+    MW_Test -- "Welch" --> Welch[T-критерий Уэлча]
+
+    NormDistVar --> ChooseStat[Выбор статистики]
+    ChooseStat --> VarAnalysis[Дисперсионный анализ]
+    VarAnalysis --> LinVarReg[Линейная регрессия]
+
+    Chi2 --> Fisher[Точный критерий Фишера]
+    LinReg --> Corrs[Корреляционный анализ]
+
+    MW_Bake & MW_Std & TTest & Welch & LinVarReg & Fisher & Corrs & LogitReg --> Summary[Сводный отчет LLM]
+    Summary --> End([__end__])
+```
+
 # Пример работы системы
 ![Example](./images/img.png)
 
