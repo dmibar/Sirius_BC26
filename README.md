@@ -100,6 +100,6 @@ flowchart TD
 Этот проект распространяется под лицензией MIT.
 
 
-# English
+# English Version
 This repository contains code for a system at [LangGraph](https://www.langchain.com/langgraph), which is capable of testing statistical hypotheses in **3-4** seconds, according to tabular data.\
 comply with the conditions for checking the application of stat. method, system select stat. test and tests the hypothesis. After this, an additional full summary of the study.
