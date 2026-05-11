@@ -1162,7 +1162,7 @@ graph.add_edge('make_logit_regression', 'summary_by_llm')
 Интерфейс системы
 """
 
-bot = telebot.TeleBot('8636014248:AAGy1lpAJ4-sbmSE-UvjQvNIdFa3IQXWrcY')
+bot = telebot.TeleBot('')
 
 class PickleSerde(JsonPlusSerializer):
     def dumps_typed(self, obj):
