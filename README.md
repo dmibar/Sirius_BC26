@@ -3,7 +3,7 @@
 Используя проверки условий применения, система подберет статистический тест, и проверит гипотезу. После, предоставит сводку исследования, в которой указаны все этапы анализа и вывод.
 
 
-Проект стал призером международного конкурса научно-технологических проектов ['Большие вызовы'](https://bigchallenges.ru/) в [Сириусе](https://sochisirius.ru/).
+Проект стал призером международного конкурса научно-технологических проектов [Большие вызовы](https://bigchallenges.ru/) в [Сириусе](https://sochisirius.ru/).
 # Граф работы системы
 ```mermaid
 graph TD
@@ -108,4 +108,4 @@ This repository contains the code for a [LangGraph](https://langchain.com)-based
 
 By evaluating application assumptions and requirements, the system automatically selects the appropriate statistical test and performs the analysis. It then provides a comprehensive research summary, detailing every stage of the analysis and the final conclusion.
 
-This project was a prize-winner at the ['Big Challenges'](https://bigchallenges.ru) international scientific and technological project competition held at [Sirius](https://sochisirius.ru).
+This project was a prize-winner at the [Big Challenges](https://bigchallenges.ru) international scientific and technological project competition held at [Sirius](https://sochisirius.ru).
